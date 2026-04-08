@@ -15,13 +15,15 @@
         .btn-main:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(74, 16, 51, 0.2); }
         .glass-nav { background: rgba(255, 245, 248, 0.9); backdrop-filter: blur(10px); }
         
-        /* Styles spécifiques Devis */
+        /* Styles Devis */
         .atelier-container { max-width: 500px; margin: 0 auto; background: white; padding: 25px; border-radius: 35px; border: 1px solid var(--nanny-pink); box-shadow: 0 20px 40px rgba(74, 16, 51, 0.05); }
-        .section-box { background: white; border: 1px solid var(--nanny-pink); padding: 20px; border-radius: 25px; margin-bottom: 20px; }
-        .option-card { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 15px; margin-bottom: 8px; cursor: pointer; background: var(--nanny-bg-soft); transition: 0.3s; border: 1px solid transparent; }
-        .option-card.selected { background: var(--nanny-plum); color: white; }
+        .section-box { background: white; border: 1px solid var(--nanny-pink); padding: 20px; border-radius: 25px; margin-bottom: 20px; text-align: left; }
+        .option-card { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 15px; margin-bottom: 8px; cursor: pointer; background: var(--nanny-bg-soft); transition: 0.3s; border: 1px solid transparent; color: var(--nanny-plum); }
+        .option-card.selected { background: var(--nanny-plum); color: white; transform: scale(1.02); }
         .admin-panel { display: none; margin-bottom: 20px; padding: 20px; border: 2px dashed var(--nanny-gold); border-radius: 25px; background: #fffdf5; }
-        .admin-input { background: transparent; border: none; border-bottom: 1px solid var(--nanny-pink); width: 100%; text-align: center; font-weight: 600; }
+        .admin-input { background: transparent; border: none; border-bottom: 1px solid var(--nanny-pink); width: 100%; text-align: center; font-weight: 600; color: var(--nanny-plum); }
+        .admin-btn-small { border:none; background:var(--nanny-gold); color:white; border-radius:5px; font-size:8px; cursor:pointer; padding:2px 6px; margin-left:4px; text-transform:uppercase; }
+        .badge-mode { font-size: 8px; padding: 2px 6px; border-radius: 10px; background: var(--nanny-pink); color: var(--nanny-plum); margin-top: 5px; display: inline-block; font-weight: bold; }
 
         .spec-card { background: white; padding: 2rem; border-radius: 2rem; border: 1px solid var(--nanny-pink); transition: 0.3s; height: 100%; text-align: center; }
         .spec-card:hover { border-color: var(--nanny-plum); transform: translateY(-5px); }
@@ -43,6 +45,7 @@
             <a href="#galerie">Vitrine</a>
             <a href="#specialites">Spécialités</a>
             <a href="#formations">Formations</a>
+            <a href="#atelier">Atelier</a>
         </div>
         <div class="flex gap-2">
             <button onclick="toggleAdmin()" id="adminBtn" class="text-[9px] border border-gray-300 px-3 py-1 rounded-full text-gray-500 hover:border-[#D4AF37] transition">⚙️ Atelier</button>
@@ -68,52 +71,23 @@
                 <h2 class="text-5xl mb-8 leading-tight text-[#4A1033]">L'âme de Nanny Bakery</h2>
                 <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
                     <p>Bien plus qu'une simple passion, la pâtisserie est pour moi un art de vivre. Diplômée et passionnée, j'ai créé <strong>Nanny Bakery</strong> pour offrir à Alger une expérience sucrée où chaque détail compte.</p>
-                    <p>Mon secret ? La patience et des ingrédients de premier choix. Chaque gâteau est une pièce unique, conçue pour transformer vos moments de vie en souvenirs inoubliables.</p>
+                    <p>Chaque gâteau est une pièce unique, conçue pour transformer vos moments de vie en souvenirs inoubliables.</p>
                 </div>
             </div>
         </div>
     </section>
 
- <section id="galerie" class="py-20 px-6 max-w-7xl mx-auto text-center border-t border-pink-100">
-    <h2 class="text-4xl mb-4 italic text-[#4A1033]">La Vitrine</h2>
-    <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-12">Nos dernières créations</p>
-    
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://i.ibb.co/tyhmqPN/v1.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
+    <section id="galerie" class="py-20 px-6 max-w-7xl mx-auto text-center border-t border-pink-100">
+        <h2 class="text-4xl mb-4 italic text-[#4A1033]">La Vitrine</h2>
+        <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-12">Nos dernières créations</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="insta-link" data-aos="fade-up"><img src="https://i.ibb.co/tyhmqPN/v1.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
+            <div class="insta-link" data-aos="fade-up" data-aos-delay="100"><img src="https://i.ibb.co/q2jT10q/v2.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
+            <div class="insta-link" data-aos="fade-up" data-aos-delay="200"><img src="https://i.ibb.co/yncpnHt8/v3.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
+            <div class="insta-link" data-aos="fade-up"><img src="https://i.ibb.co/HTHXZ4Pv/v4.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
+            <div class="insta-link" data-aos="fade-up" data-aos-delay="100"><img src="https://i.ibb.co/QFY3Tvjh/v5.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
+            <div class="insta-link" data-aos="fade-up" data-aos-delay="200"><img src="https://i.ibb.co/m5kmjxBZ/v6.jpg" class="w-full aspect-square object-cover"><div class="insta-overlay">📸</div></div>
         </div>
-
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://i.ibb.co/q2jT10q/v2.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
-        </div>
-
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="300">
-            <img src="https://i.ibb.co/yncpnHt8/v3.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
-        </div>
-
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://i.ibb.co/HTHXZ4Pv/v4.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
-        </div>
-
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://i.ibb.co/QFY3Tvjh/v5.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
-        </div>
-
-        <div class="insta-link" data-aos="fade-up" data-aos-delay="300">
-            <img src="https://i.ibb.co/m5kmjxBZ/v6.jpg" class="w-full aspect-square object-cover">
-            <div class="insta-overlay">📸</div>
-        </div>
-    </div>
-</section>
-
-        </div>
-    </div>
-</section>
     </section>
 
     <section id="specialites" class="py-20 px-6 max-w-7xl mx-auto text-center border-t border-pink-100">
@@ -141,7 +115,7 @@
             </div>
             <div class="spec-card" data-aos="fade-up" data-aos-delay="400">
                 <span class="text-4xl mb-4 block">👩‍🍳</span>
-                <h3 class="font-bold py-2 uppercase text-xs">Ateliers Formations</h3>
+                <h3 class="font-bold py-2 uppercase text-xs">Formations</h3>
                 <p class="text-gray-500 text-[11px]">Transmettre le savoir-faire aux futures pâtissières.</p>
             </div>
         </div>
@@ -152,12 +126,12 @@
         <div class="grid md:grid-cols-3 gap-8">
             <div class="review-card" data-aos="fade-up">
                 <div class="text-[#D4AF37] mb-2">★★★★★</div>
-                <p class="text-gray-600 italic text-sm mb-4">"Le gâteau était aussi beau que bon. Mes invités n'en revenaient pas. Merci Nanny pour ton professionnalisme !"</p>
+                <p class="text-gray-600 italic text-sm mb-4">"Le gâteau était aussi beau que bon. Mes invités n'en revenaient pas. Merci Nanny !"</p>
                 <p class="font-bold text-[#4A1033] text-xs uppercase">— Sarah B.</p>
             </div>
             <div class="review-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-[#D4AF37] mb-2">★★★★★</div>
-                <p class="text-gray-600 italic text-sm mb-4">"J'ai suivi la formation de 3 jours. Une révélation ! Nanny est généreuse dans ses conseils et très patiente."</p>
+                <p class="text-gray-600 italic text-sm mb-4">"J'ai suivi la formation de 3 jours. Une révélation ! Nanny est généreuse dans ses conseils."</p>
                 <p class="font-bold text-[#4A1033] text-xs uppercase">— Amina R.</p>
             </div>
             <div class="review-card" data-aos="fade-up" data-aos-delay="200">
@@ -186,42 +160,51 @@
                     <option>Formation intensive (3 jours)</option>
                     <option>Masterclass Salé Prestige</option>
                 </select>
-                <button onclick="sendFormationWA()" class="w-full btn-main py-4 rounded-xl font-bold uppercase text-[10px]">S'inscrire via WhatsApp</button>
+                <button onclick="window.open('https://wa.me/213550193993?text=Bonjour, je souhaite m\'inscrire à une formation')" class="w-full btn-main py-4 rounded-xl font-bold uppercase text-[10px]">S'inscrire via WhatsApp</button>
             </div>
         </div>
     </section>
 
-    <section id="atelier" class="py-24 bg-gray-50/50 px-6 border-t border-pink-100">
-        <div class="max-w-xl mx-auto text-center mb-12" data-aos="fade-up">
-            <h2 class="text-3xl mb-4 italic text-[#4A1033]">Concevons votre bonheur</h2>
-            <p class="text-gray-600 text-sm leading-relaxed">Chaque événement est unique, c'est pourquoi nous créons des pâtisseries qui vous ressemblent.</p>
-        </div>
+   <section id="atelier" class="py-24 bg-gray-50/50 px-6 border-t border-pink-100">
+    <div class="max-w-xl mx-auto text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl mb-4 italic text-[#4A1033]">Concevons votre bonheur</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">Personnalisez votre gâteau et obtenez une estimation immédiate.</p>
+        <p class="text-[#D4AF37] text-[11px] font-semibold mt-2 italic">"Personnalisez votre création : chaque supplément est calculé sur la base d'une seule part."</p>
+    </div>
 
         <div class="atelier-container" data-aos="zoom-in">
             <div id="admin-panel" class="admin-panel text-gray-700">
-                <p class="text-[10px] font-bold text-center mb-4 uppercase text-[#D4AF37]">Réglages Admin</p>
-                <div class="grid grid-cols-2 gap-4 text-[10px] mb-4 text-center">
-                    <div>Base/Part: <input type="number" id="base_p" oninput="updateConfig()" class="admin-input"></div>
-                    <div>Extra/Étage: <input type="number" id="etage_p" oninput="updateConfig()" class="admin-input"></div>
+                <p class="text-[10px] font-bold text-center mb-4 uppercase text-[#D4AF37]">🛠️ RÉGLAGES CHEF (ADMIN)</p>
+                <div class="space-y-4 text-[10px]">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>Base/Part: <input type="number" id="base_p" oninput="updateConfig()" class="admin-input"></div>
+                        <div>Extra/Étage: <input type="number" id="etage_p" oninput="updateConfig()" class="admin-input"></div>
+                    </div>
+                    <div>WhatsApp: <input type="text" id="shop_wa_input" oninput="updateConfig()" class="admin-input"></div>
+                    <button onclick="addNewCategory()" class="w-full bg-[#D4AF37] text-white text-[10px] py-2 rounded-xl font-bold uppercase">+ Nouvelle Section</button>
                 </div>
-                <button onclick="addNewCategory()" class="w-full bg-[#D4AF37] text-white text-[10px] py-2 rounded-xl font-bold uppercase">+ Nouvelle Section</button>
             </div>
 
             <div class="text-center mb-8">
                 <h3 class="text-xl tracking-[0.3em] uppercase text-[#4A1033] font-bold">Estimation Devis</h3>
+                <p id="display-config-info" class="text-[9px] text-gray-400 mt-2 uppercase"></p>
             </div>
 
             <div class="section-box">
-                <span class="text-[10px] font-bold text-[#4A1033] uppercase tracking-widest">📐 Format</span>
+                <span class="text-[10px] font-bold text-[#4A1033] uppercase tracking-widest">📐 Format & Date</span>
                 <div class="grid grid-cols-2 gap-6 mt-6 text-center">
                     <div>
-                        <label class="text-[9px] uppercase font-bold text-gray-400 block mb-2">Parts</label>
-                        <input type="number" id="parts" value="10" oninput="calculate()" class="text-2xl font-bold w-full bg-transparent text-center outline-none">
+                        <label class="text-[9px] uppercase font-bold text-gray-400 block mb-2">Nombre de Parts</label>
+                        <input type="number" id="parts" value="10" oninput="calculate()" class="text-2xl font-bold w-full bg-transparent text-center outline-none text-[#4A1033]">
                     </div>
                     <div>
-                        <label class="text-[9px] uppercase font-bold text-gray-400 block mb-2">Étages</label>
-                        <input type="number" id="etages" value="1" oninput="calculate()" class="text-2xl font-bold w-full bg-transparent text-center outline-none">
+                        <label class="text-[9px] uppercase font-bold text-gray-400 block mb-2">Nombre d'Étages</label>
+                        <input type="number" id="etages" value="1" oninput="calculate()" class="text-2xl font-bold w-full bg-transparent text-center outline-none text-[#4A1033]">
                     </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-pink-50">
+                    <label class="text-[9px] uppercase font-bold text-gray-400 block mb-2">Date de l'événement</label>
+                    <input type="date" id="event-date" class="w-full bg-transparent text-center font-bold text-[#4A1033] outline-none">
                 </div>
             </div>
 
@@ -238,8 +221,8 @@
     </section>
 
     <footer class="py-16 text-center">
-<img src="https://i.ibb.co/wrYQw4d9/logo.png" class="w-24 h-24 rounded-full mx-auto shadow-xl mb-6 object-cover border-2 border-white">     
-   <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">&copy; 2026 Nanny Bakery | Algiers</p>
+        <img src="https://i.ibb.co/wrYQw4d9/logo.png" class="w-24 h-24 rounded-full mx-auto shadow-xl mb-6 object-cover border-2 border-white">
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">© 2026 Nanny Bakery - Designed by Raouf Studio</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -247,53 +230,57 @@
         AOS.init({ duration: 1000, once: true });
 
         let isAdmin = false;
-        let database = JSON.parse(localStorage.getItem('nanny_v6_data')) || {
+        let database = JSON.parse(localStorage.getItem('nanny_bakery_data')) || {
             sections: [
-                {title: "Saveurs Biscuits", isMultiple: false, items: [{n: "Vanille Signature", p: 0, s: true}, {n: "Chocolat Intense", p: 200, s: false}]},
-                {title: "Fourrages", isMultiple: true, items: [{n: "Fruits Frais", p: 500, s: false}, {n: "Caramel Salé", p: 300, s: false}]}
+                {title: "Forme du Gâteau", isMultiple: false, items: [{n: "Rond (Classique)", p: 0, s: true}, {n: "Carré", p: 50, s: false}]},
+                {title: "Saveurs Biscuit", isMultiple: false, items: [{n: "Vanille", p: 0, s: true}, {n: "Chocolat", p: 20, s: false}]},
+                {title: "Fourrages Gourmet", isMultiple: true, items: [{n: "Caramel Beurre Salé", p: 50, s: false}, {n: "Praliné Noisette", p: 100, s: false}]}
             ],
-            config: { base: 600, etage: 2000, whatsapp: "213550193993" }
+            config: { base: 300, etage: 1000, whatsapp: "213550193993" }
         };
 
-        function toggleAdmin() {
-            if (!isAdmin) {
-                let code = prompt("Code Atelier :");
-                if (code === "1291") {
-                    isAdmin = true;
-                    document.getElementById('admin-panel').style.display = 'block';
-                    document.getElementById('adminBtn').innerText = "✔️ Ok";
-                    document.getElementById('base_p').value = database.config.base;
-                    document.getElementById('etage_p').value = database.config.etage;
-                    render();
-                }
-            } else {
-                isAdmin = false;
-                document.getElementById('admin-panel').style.display = 'none';
-                document.getElementById('adminBtn').innerText = "⚙️ Atelier";
-                render();
-            }
+        function calculate() {
+            const p = Math.max(0, parseInt(document.getElementById('parts').value) || 0);
+            const e = Math.max(1, parseInt(document.getElementById('etages').value) || 1);
+            let prixParPart = database.config.base;
+            database.sections.forEach(sec => {
+                sec.items.forEach(item => { if (item.s) prixParPart += item.p; });
+            });
+            let total = (p * prixParPart) + ((e - 1) * database.config.etage);
+            document.getElementById('total-display').innerText = new Intl.NumberFormat('fr-FR').format(total);
+            document.getElementById('display-config-info').innerText = `${database.config.base} DA/part • +${database.config.etage} DA/étage suppl.`;
         }
 
         function render() {
             const container = document.getElementById('dynamic-sections');
             container.innerHTML = '';
             database.sections.forEach((sec, sIdx) => {
-                let html = `<div class="section-box">
-                    <div class="flex justify-between items-center mb-4 border-b border-pink-50 pb-2">
-                        <span class="text-[10px] font-bold text-[#4A1033] uppercase tracking-widest">${sec.title}</span>
-                        ${isAdmin ? `<button onclick="deleteCategory(${sIdx})" class="text-red-500 font-bold">×</button>` : ''}
+                let html = `
+                <div class="section-box" data-aos="fade-up">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <div>
+                            <span class="text-[10px] font-bold text-[#4A1033] uppercase tracking-widest">${sec.title}</span><br>
+                            <span class="badge-mode">${sec.isMultiple ? 'SÉLECTION LIBRE' : 'CHOIX UNIQUE'}</span>
+                        </div>
+                        ${isAdmin ? `<div>
+                            <button onclick="toggleSecMode(${sIdx})" class="admin-btn-small">${sec.isMultiple ? 'Unique' : 'Libre'}</button>
+                            <button onclick="deleteCategory(${sIdx})" style="color:red; font-weight:bold; margin-left:10px;">×</button>
+                        </div>` : ''}
                     </div>`;
                 sec.items.forEach((item, iIdx) => {
                     html += `
                     <div class="option-card ${item.s ? 'selected' : ''}" onclick="toggleItem(${sIdx}, ${iIdx})">
                         <span class="text-xs font-semibold">${item.n}</span>
-                        <div class="flex items-center gap-2">
-                            <span class="text-[10px] font-bold">+ ${item.p} DA</span>
-                            ${isAdmin ? `<button onclick="event.stopPropagation(); deleteItem(${sIdx}, ${iIdx})" class="text-red-400">×</button>` : ''}
+                        <div class="flex items-center">
+                            <span class="text-[9px] mr-2 opacity-80">+${item.p} DA/p</span>
+                            ${isAdmin ? `
+                                <button onclick="event.stopPropagation(); editItemPrice(${sIdx}, ${iIdx})" class="admin-btn-small">PRIX</button>
+                                <button onclick="event.stopPropagation(); deleteItem(${sIdx}, ${iIdx})" style="color:red; margin-left:5px; font-weight:bold;">×</button>
+                            ` : ''}
                         </div>
                     </div>`;
                 });
-                if (isAdmin) html += `<button onclick="addItem(${sIdx})" class="w-full border-2 border-dashed border-gray-200 text-[9px] py-2 mt-2 rounded-lg text-gray-400 font-bold">+ Ajouter Option</button>`;
+                if (isAdmin) html += `<button onclick="addItem(${sIdx})" class="w-full border border-dashed border-[#D4AF37] text-[#D4AF37] py-2 rounded-xl text-[9px] font-bold mt-2 uppercase">+ Ajouter Option</button>`;
                 container.innerHTML += html + `</div>`;
             });
             calculate();
@@ -302,49 +289,75 @@
         function toggleItem(sIdx, iIdx) {
             const sec = database.sections[sIdx];
             if (sec.isMultiple) { sec.items[iIdx].s = !sec.items[iIdx].s; } 
-            else { sec.items.forEach(i => i.s = false); sec.items[iIdx].s = true; }
+            else { sec.items.forEach((item, idx) => item.s = (idx === iIdx)); }
+            save(); render();
+        }
+
+        function toggleAdmin() {
+            if (!isAdmin) {
+                if (prompt("Code Atelier :") === "1234") {
+                    isAdmin = true;
+                    document.getElementById('admin-panel').style.display = 'block';
+                    document.getElementById('adminBtn').innerText = "✔️ Terminer";
+                    syncAdminInputs();
+                }
+            } else {
+                isAdmin = false;
+                document.getElementById('admin-panel').style.display = 'none';
+                document.getElementById('adminBtn').innerText = "⚙️ Atelier";
+            }
             render();
         }
 
-        function calculate() {
-            const p = parseInt(document.getElementById('parts').value) || 0;
-            const e = parseInt(document.getElementById('etages').value) || 1;
-            let total = (p * database.config.base) + ((e - 1) * database.config.etage);
-            database.sections.forEach(sec => sec.items.forEach(item => { if (item.s) total += item.p; }));
-            document.getElementById('total-display').innerText = total.toLocaleString();
+        function syncAdminInputs() {
+            document.getElementById('base_p').value = database.config.base;
+            document.getElementById('etage_p').value = database.config.etage;
+            document.getElementById('shop_wa_input').value = database.config.whatsapp;
         }
 
         function updateConfig() {
             database.config.base = parseInt(document.getElementById('base_p').value) || 0;
             database.config.etage = parseInt(document.getElementById('etage_p').value) || 0;
+            database.config.whatsapp = document.getElementById('shop_wa_input').value;
             save(); calculate();
         }
 
-        function addNewCategory() { const t = prompt("Nom section :"); if(t) { database.sections.push({title: t, isMultiple: false, items: []}); save(); render(); } }
+        function save() { localStorage.setItem('nanny_bakery_data', JSON.stringify(database)); }
+        function toggleSecMode(idx) { database.sections[idx].isMultiple = !database.sections[idx].isMultiple; save(); render(); }
         function deleteCategory(idx) { if(confirm("Supprimer ?")) { database.sections.splice(idx, 1); save(); render(); } }
-        function addItem(sIdx) { const n = prompt("Nom :"); const p = prompt("Prix :"); if(n) { database.sections[sIdx].items.push({n: n, p: parseInt(p)||0, s: false}); save(); render(); } }
+        function addItem(idx) { 
+            const n = prompt("Nom :"); const p = prompt("Prix/part (DA) :"); 
+            if(n) { database.sections[idx].items.push({n, p: parseInt(p)||0, s: false}); save(); render(); } 
+        }
         function deleteItem(sIdx, iIdx) { database.sections[sIdx].items.splice(iIdx, 1); save(); render(); }
-        function save() { localStorage.setItem('nanny_v6_data', JSON.stringify(database)); }
+        function editItemPrice(sIdx, iIdx) {
+            const newPrice = prompt("Prix/part :", database.sections[sIdx].items[iIdx].p);
+            if (newPrice !== null) { database.sections[sIdx].items[iIdx].p = parseInt(newPrice) || 0; save(); render(); }
+        }
+        function addNewCategory() { 
+            const t = prompt("Catégorie :"); if(t) { database.sections.push({title: t, isMultiple: false, items: []}); save(); render(); } 
+        }
 
         function sendWA() {
-            let msg = `*✨ DEVIS NANNY BAKERY ✨*\n\n`;
-            msg += `📐 *Format* : ${document.getElementById('parts').value} parts / ${document.getElementById('etages').value} étage(s)\n\n`;
+            const dateInput = document.getElementById('event-date').value;
+            if(!dateInput) { alert("Veuillez choisir une date."); return; }
+            const formattedDate = new Date(dateInput).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+            let msg = `*🍰 DEVIS NANNY BAKERY*\n`;
+            msg += `📅 *DATE* : ${formattedDate}\n`;
+            msg += `📏 *FORMAT* : ${document.getElementById('parts').value} parts / ${document.getElementById('etages').value} étage(s)\n\n`;
             database.sections.forEach(sec => {
                 let sel = sec.items.filter(i => i.s).map(i => i.n);
-                if(sel.length) msg += `*${sec.title}* : ${sel.join(', ')}\n`;
+                if(sel.length) msg += `🔹 *${sec.title}* : ${sel.join(', ')}\n`;
             });
             msg += `\n💰 *TOTAL ESTIMÉ : ${document.getElementById('total-display').innerText} DA*`;
             window.open(`https://wa.me/${database.config.whatsapp}?text=${encodeURIComponent(msg)}`);
         }
 
-        function sendFormationWA() {
-            const nom = document.getElementById('form_nom').value;
-            const type = document.getElementById('form_type').value;
-            if(!nom) { alert("Nom svp"); return; }
-            window.open(`https://wa.me/${database.config.whatsapp}?text=${encodeURIComponent('*🎓 INSCRIPTION* : ' + nom + ' - ' + type)}`);
-        }
-
-        render();
+        window.addEventListener('DOMContentLoaded', () => {
+            const dateField = document.getElementById('event-date');
+            if(dateField) dateField.min = new Date().toISOString().split('T')[0];
+            render();
+        });
     </script>
 </body>
 </html>
